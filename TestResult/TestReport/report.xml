@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="5" skipped="0" tests="5" time="95.284" timestamp="2022-02-27T23:45:17.885435" hostname="DESKTOP-KL6VQQI"><testcase classname="TestCases.test_00_login.TestLogin" name="test_login_0_user_wrongFormat[phone_data0]" time="9.405"><failure message="AssertionError: assert '请输入正确的手机号' != '请输入正确的手机号'&#10; +  where '请输入正确的手机号' = &lt;bound method LoginPage.get_errorMsg_from_loginArea of &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;&gt;()&#10; +    where &lt;bound method LoginPage.get_errorMsg_from_loginArea of &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;&gt; = &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;.get_errorMsg_from_loginArea">self = &lt;TestCases.test_00_login.TestLogin object at 0x0000014F01EF2130&gt;
+access_web = (&lt;selenium.webdriver.chrome.webdriver.WebDriver (session="db873c24183fae8c99935b0493eeea2a")&gt;, &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;)
+phone_data = {'check': '请输入正确的手机号', 'password': 'test123456', 'title': '异常用例-输入10位手机号', 'user': '1730742859'}
+
+    @pytest.mark.parametrize("phone_data", LD.phone_data)
+    @pytest.mark.demo1
+    def test_login_0_user_wrongFormat(self, access_web, phone_data):
+        my_log.info("****异常用例——{}****".format(phone_data['title']))
+        # 步骤 输入用户名：Xxx 密码：XXX 点击登录
+        access_web[1].login(phone_data['user'], phone_data['password'])
+        try:
+            # 登录页面获取提示框文本值
+            # 断言 比对文本内容与预期的值是否相等
+            # self.assertEqual(access_web[1].get_errorMsg_from_loginArea(), phone_data['check'])
+&gt;           assert access_web[1].get_errorMsg_from_loginArea() != phone_data['check']
+E           AssertionError: assert '请输入正确的手机号' != '请输入正确的手机号'
+E            +  where '请输入正确的手机号' = &lt;bound method LoginPage.get_errorMsg_from_loginArea of &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;&gt;()
+E            +    where &lt;bound method LoginPage.get_errorMsg_from_loginArea of &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;&gt; = &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;.get_errorMsg_from_loginArea
+
+TestCases\test_00_login.py:66: AssertionError</failure></testcase><testcase classname="TestCases.test_00_login.TestLogin" name="test_login_0_user_wrongFormat[phone_data1]" time="2.000"><failure message="AssertionError: assert '请输入正确的手机号' != '请输入正确的手机号'&#10; +  where '请输入正确的手机号' = &lt;bound method LoginPage.get_errorMsg_from_loginArea of &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;&gt;()&#10; +    where &lt;bound method LoginPage.get_errorMsg_from_loginArea of &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;&gt; = &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;.get_errorMsg_from_loginArea">self = &lt;TestCases.test_00_login.TestLogin object at 0x0000014F01EF2220&gt;
+access_web = (&lt;selenium.webdriver.chrome.webdriver.WebDriver (session="db873c24183fae8c99935b0493eeea2a")&gt;, &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;)
+phone_data = {'check': '请输入正确的手机号', 'password': 'test123456', 'title': '异常用例-输入12位手机号', 'user': '173074285955'}
+
+    @pytest.mark.parametrize("phone_data", LD.phone_data)
+    @pytest.mark.demo1
+    def test_login_0_user_wrongFormat(self, access_web, phone_data):
+        my_log.info("****异常用例——{}****".format(phone_data['title']))
+        # 步骤 输入用户名：Xxx 密码：XXX 点击登录
+        access_web[1].login(phone_data['user'], phone_data['password'])
+        try:
+            # 登录页面获取提示框文本值
+            # 断言 比对文本内容与预期的值是否相等
+            # self.assertEqual(access_web[1].get_errorMsg_from_loginArea(), phone_data['check'])
+&gt;           assert access_web[1].get_errorMsg_from_loginArea() != phone_data['check']
+E           AssertionError: assert '请输入正确的手机号' != '请输入正确的手机号'
+E            +  where '请输入正确的手机号' = &lt;bound method LoginPage.get_errorMsg_from_loginArea of &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;&gt;()
+E            +    where &lt;bound method LoginPage.get_errorMsg_from_loginArea of &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;&gt; = &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;.get_errorMsg_from_loginArea
+
+TestCases\test_00_login.py:66: AssertionError</failure></testcase><testcase classname="TestCases.test_00_login.TestLogin" name="test_login_0_user_wrongFormat[phone_data2]" time="1.826"><failure message="AssertionError: assert '请输入手机号' != '请输入手机号'&#10; +  where '请输入手机号' = &lt;bound method LoginPage.get_errorMsg_from_loginArea of &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;&gt;()&#10; +    where &lt;bound method LoginPage.get_errorMsg_from_loginArea of &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;&gt; = &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;.get_errorMsg_from_loginArea">self = &lt;TestCases.test_00_login.TestLogin object at 0x0000014F01EF2370&gt;
+access_web = (&lt;selenium.webdriver.chrome.webdriver.WebDriver (session="db873c24183fae8c99935b0493eeea2a")&gt;, &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;)
+phone_data = {'check': '请输入手机号', 'password': 'test123456', 'title': '异常用例-手机号为空', 'user': ''}
+
+    @pytest.mark.parametrize("phone_data", LD.phone_data)
+    @pytest.mark.demo1
+    def test_login_0_user_wrongFormat(self, access_web, phone_data):
+        my_log.info("****异常用例——{}****".format(phone_data['title']))
+        # 步骤 输入用户名：Xxx 密码：XXX 点击登录
+        access_web[1].login(phone_data['user'], phone_data['password'])
+        try:
+            # 登录页面获取提示框文本值
+            # 断言 比对文本内容与预期的值是否相等
+            # self.assertEqual(access_web[1].get_errorMsg_from_loginArea(), phone_data['check'])
+&gt;           assert access_web[1].get_errorMsg_from_loginArea() != phone_data['check']
+E           AssertionError: assert '请输入手机号' != '请输入手机号'
+E            +  where '请输入手机号' = &lt;bound method LoginPage.get_errorMsg_from_loginArea of &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;&gt;()
+E            +    where &lt;bound method LoginPage.get_errorMsg_from_loginArea of &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;&gt; = &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;.get_errorMsg_from_loginArea
+
+TestCases\test_00_login.py:66: AssertionError</failure></testcase><testcase classname="TestCases.test_00_login.TestLogin" name="test_login_0_user_wrongFormat[phone_data3]" time="2.047"><failure message="AssertionError: assert '请输入正确的手机号' != '请输入正确的手机号'&#10; +  where '请输入正确的手机号' = &lt;bound method LoginPage.get_errorMsg_from_loginArea of &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;&gt;()&#10; +    where &lt;bound method LoginPage.get_errorMsg_from_loginArea of &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;&gt; = &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;.get_errorMsg_from_loginArea">self = &lt;TestCases.test_00_login.TestLogin object at 0x0000014F01EF23D0&gt;
+access_web = (&lt;selenium.webdriver.chrome.webdriver.WebDriver (session="db873c24183fae8c99935b0493eeea2a")&gt;, &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;)
+phone_data = {'check': '请输入正确的手机号', 'password': 'test123456', 'title': '异常用例-手机号不在号码段', 'user': '11607428595'}
+
+    @pytest.mark.parametrize("phone_data", LD.phone_data)
+    @pytest.mark.demo1
+    def test_login_0_user_wrongFormat(self, access_web, phone_data):
+        my_log.info("****异常用例——{}****".format(phone_data['title']))
+        # 步骤 输入用户名：Xxx 密码：XXX 点击登录
+        access_web[1].login(phone_data['user'], phone_data['password'])
+        try:
+            # 登录页面获取提示框文本值
+            # 断言 比对文本内容与预期的值是否相等
+            # self.assertEqual(access_web[1].get_errorMsg_from_loginArea(), phone_data['check'])
+&gt;           assert access_web[1].get_errorMsg_from_loginArea() != phone_data['check']
+E           AssertionError: assert '请输入正确的手机号' != '请输入正确的手机号'
+E            +  where '请输入正确的手机号' = &lt;bound method LoginPage.get_errorMsg_from_loginArea of &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;&gt;()
+E            +    where &lt;bound method LoginPage.get_errorMsg_from_loginArea of &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;&gt; = &lt;PageObjects.login_page.LoginPage object at 0x0000014F01EBA070&gt;.get_errorMsg_from_loginArea
+
+TestCases\test_00_login.py:66: AssertionError</failure></testcase><testcase classname="TestCases.test_00_login.TestLogin" name="test_login_0_user_wrongFormat[phone_data4]" time="19.684"><failure message="AssertionError: assert '请输入密码' != '请输入密码'&#10; +  where '请输入密码' = &lt;bound method LoginPage.get_errorMsg_from_loginArea of &lt;PageObjects.login_page.LoginPage object at 0x0000014F02886BE0&gt;&gt;()&#10; +    where &lt;bound method LoginPage.get_errorMsg_from_loginArea of &lt;PageObjects.login_page.LoginPage object at 0x0000014F02886BE0&gt;&gt; = &lt;PageObjects.login_page.LoginPage object at 0x0000014F02886BE0&gt;.get_errorMsg_from_loginArea">self = &lt;TestCases.test_00_login.TestLogin object at 0x0000014F01EF2490&gt;
+access_web = (&lt;selenium.webdriver.chrome.webdriver.WebDriver (session="fa700339aedbc581e888f90851e840ff")&gt;, &lt;PageObjects.login_page.LoginPage object at 0x0000014F02886BE0&gt;)
+phone_data = {'check': '请输入密码', 'password': '', 'title': '异常用例-密码为空', 'user': '17307428595'}
+
+    @pytest.mark.parametrize("phone_data", LD.phone_data)
+    @pytest.mark.demo1
+    def test_login_0_user_wrongFormat(self, access_web, phone_data):
+        my_log.info("****异常用例——{}****".format(phone_data['title']))
+        # 步骤 输入用户名：Xxx 密码：XXX 点击登录
+        access_web[1].login(phone_data['user'], phone_data['password'])
+        try:
+            # 登录页面获取提示框文本值
+            # 断言 比对文本内容与预期的值是否相等
+            # self.assertEqual(access_web[1].get_errorMsg_from_loginArea(), phone_data['check'])
+&gt;           assert access_web[1].get_errorMsg_from_loginArea() != phone_data['check']
+E           AssertionError: assert '请输入密码' != '请输入密码'
+E            +  where '请输入密码' = &lt;bound method LoginPage.get_errorMsg_from_loginArea of &lt;PageObjects.login_page.LoginPage object at 0x0000014F02886BE0&gt;&gt;()
+E            +    where &lt;bound method LoginPage.get_errorMsg_from_loginArea of &lt;PageObjects.login_page.LoginPage object at 0x0000014F02886BE0&gt;&gt; = &lt;PageObjects.login_page.LoginPage object at 0x0000014F02886BE0&gt;.get_errorMsg_from_loginArea
+
+TestCases\test_00_login.py:66: AssertionError</failure></testcase></testsuite></testsuites>
