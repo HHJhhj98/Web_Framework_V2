@@ -63,7 +63,7 @@ class TestLogin:
             # 登录页面获取提示框文本值
             # 断言 比对文本内容与预期的值是否相等
             # self.assertEqual(access_web[1].get_errorMsg_from_loginArea(), phone_data['check'])
-            assert access_web[1].get_errorMsg_from_loginArea() != phone_data['check']
+            assert access_web[1].get_errorMsg_from_loginArea() == phone_data['check']
         except:
             my_log.exception("****异常用例——{}，断言失败！！！****".format(phone_data['title']))
             raise
