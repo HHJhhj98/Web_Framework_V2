@@ -5,7 +5,7 @@
 # @File : login_datas.py
 
 # 正常场景-测试数据
-success_data = {'user': '17307428595', 'password': 'test123456', 'title': '正常登录'}
+success_data = [{'user': '17307428595', 'password': 'test123456', 'title': '正常登录'}]
 
 # 异常用例——手机号格式不正确（10位，12位，不在号码段，为空） ddt
 phone_data = [{'user': '1730742859', 'password': 'test123456', 'check': '请输入正确的手机号', 'title': '异常用例-输入10位手机号'},
